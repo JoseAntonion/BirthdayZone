@@ -39,7 +39,11 @@ footer {
     float:left;
     padding: 0;
     padding-bottom:15px;
-    color:red;    
+    color:black;    
+}
+
+#parrafo{
+    text-align: center;
 }
 
 #titulo h1 {

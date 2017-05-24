@@ -1,3 +1,6 @@
+<?php
+
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -10,14 +13,14 @@
 		<div id="contenido">
 			<header>
 				<div id="titulo">
-					<h1>Zona de Cumpleaños Pa´l Profeee!</h1>
-					<h3>Miamors</h3>
+					<h1>Zona de Cumpleaños</h1>
+					<h3>Nombre de empresa</h3>
 				</div>
 				<div id="logo-empresa">
 					<img alt="logo empresa" src="logo.png"  />
 				</div>
 			</header>
-			
+			<form
 			<div id="login">	
 				<div id="formulario">
 					<fieldset>
@@ -39,8 +42,9 @@
 			</div>
 			
 			<footer>
-				<p>Diseño seccion 003</p>
+				<p>Diseño de Aplicaciones para Internet</p>
 			</footer>
 		</div>			
 	</body>
 </html>
+
