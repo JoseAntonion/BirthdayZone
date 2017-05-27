@@ -1,5 +1,6 @@
 <?php
-
+    session_start();   
+    //$_SESSION["nombre"] = "Juan Pérez";
 ?>
 <!DOCTYPE html>
 <html>
