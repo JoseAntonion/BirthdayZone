@@ -1,12 +1,25 @@
 <?php 
     session_start();
-    
-    if($_SERVER["REQUEST_METHOD"] == "POST") {
-        if(isset($_POST["usuario"])) {
-            $_SESSION["nombre"] = $_POST["usuario"];
-            header("location: restringida.php");
-        }
+
+include_once __DIR__."/controller/UsuarioController.php";
+
+if($_SERVER["REQUEST_METHOD"] == "POST") {
+    if(isset($_POST["Salir"])){
+        header("location: index.php");
+        return;
     }
+    if(isset($_POST["email"]) && isset($_POST["clave"])) {
+
+       $exito = UsuarioController::validarUsuarioClave($_POST["email"], $_POST["clave"]);
+       
+       if($exito) {
+           header("location: mantenedorTrabajadores.php");
+           return;
+       } else {
+           $errorMessage = "usuario o clave incorrectos";
+       }
+    }  
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -44,7 +57,7 @@
                         </fieldset>
 
                         <input type="submit" name="entrar" value="Entrar" />
-                        <input type="button" name="salir" value="Salir" />
+                        <input type="button" onclick="location='index.php'" name="salir" value="Salir" /> 
                     </div>				
                 </div>
             </form>
