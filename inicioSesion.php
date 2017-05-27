@@ -28,6 +28,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         <meta name="viewport" content="width=device-width; initial-scale=1.0;">
         <title>Login</title>
         <link rel="stylesheet" type="text/css" href="css/principal.css"  media="all">
+        <script type="text/javascript" src="js/validaCamposLogin.js"></script>
     </head>
     <body>
         <div id="contenido">
@@ -40,7 +41,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                     <img alt="logo empresa" src="logo.png"  />
                 </div>
             </header>
-            <form method="post" action="">
+            <form method="post" action="" onsubmit="validaCampos();">
                 <div id="login">	
                     <div id="formulario">
                         <fieldset>
@@ -56,7 +57,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                             </div>
                         </fieldset>
 
-                        <input type="submit" name="entrar" value="Entrar" />
+                        <input type="submit" name="entrar" value="Entrar" onsubmit="validaCampos();" />
                         <input type="button" onclick="location='index.php'" name="salir" value="Salir" /> 
                     </div>				
                 </div>

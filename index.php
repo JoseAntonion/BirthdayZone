@@ -9,6 +9,7 @@
         <meta name="viewport" content="width=device-width; initial-scale=1.0;">
         <title>Login</title>
         <link rel="stylesheet" type="text/css" href="css/principal.css"  media="all">
+        <script type="text/javascript" src="js/validaCamposLogin.js"></script>
     </head>
     <body>
         <div id="contenido">
@@ -35,7 +36,7 @@
                         </div>
 
                         <input type="submit" name="entrar" value="Configuracion" />
-                        <input type="button" name="salir" value="Presentacion" />
+                        <input type="button" name="salir" value="Presentacion" onclick="validaCampos()"/>
                     </div>				
                 </div>
             </form>
